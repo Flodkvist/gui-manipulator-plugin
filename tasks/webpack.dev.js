@@ -4,12 +4,12 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   output: {
-    path: `${__dirname}/../../origo/plugins`,
+    path: `${__dirname}/../../origo-git/plugins`,
     publicPath: '/build/js',
-    filename: 'barebone.js',
+    filename: 'guimodifier.js',
     libraryTarget: 'var',
     libraryExport: 'default',
-    library: 'Barebone'
+    library: 'Guimodifier'
   },
   mode: 'development',
   module: {

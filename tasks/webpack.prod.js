@@ -13,10 +13,10 @@ module.exports = merge(common, {
   },
   output: {
     path: `${__dirname}/../build/js`,
-    filename: 'barebone.min.js',
+    filename: 'guimodifier.min.js',
     libraryTarget: 'var',
     libraryExport: 'default',
-    library: 'Barebone'
+    library: 'Guimodifier'
   },
   devtool: false,
   mode: 'production',
@@ -48,7 +48,7 @@ module.exports = merge(common, {
   plugins: [
     new webpack.optimize.AggressiveMergingPlugin(),
     new MiniCssExtractPlugin({
-      filename: '../css/barebone.css'
+      filename: '../css/guimodifier.css'
     })
   ]
 });
