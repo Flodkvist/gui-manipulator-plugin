@@ -1,8 +1,9 @@
-# Barebone plugin
+# GUI-mode switcher(?)
 
-This is just an example plugin
+Quick & dirty origo plugin to "minify" elements in origo legend. 
+Switches between css padding values from css on mapload and preset values in plugin code.
 
-#### Example usage of Barebone plugin
+#### Example usage
 
 **index.html:**
 ```
@@ -12,24 +13,23 @@ This is just an example plugin
     	<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
     	<title>Origo exempel</title>
     	<link href="css/style.css" rel="stylesheet">
-    	<link href="plugins/barebone.css" rel="stylesheet">
+    	<link href="plugins/guimodifier.css" rel="stylesheet">
     </head>
     <body>
     <div id="app-wrapper">
     </div>
     <script src="js/origo.js"></script>
-    <script src="plugins/barebone.js"></script>
+    <script src="plugins/guimodifier.js"></script>
 
     <script type="text/javascript">
       //Init origo
       var origo = Origo('index.json');
       origo.on('load', function (viewer) {
-        var barebone = Barebone({
-          buttonText: 'Click this!',
-          content: 'Just nonsense'
+        var guimodifier = Guimodifier({
+		    initialMode: 'original'
         });
-        viewer.addComponent(barebone);
+        viewer.addComponent(guimodifier);
       });
     </script>
 ```
- Codepen: https://codepen.io/jokd/pen/VwmgjYP
+
